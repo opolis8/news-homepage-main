@@ -20,7 +20,9 @@ const Navbar = () => {
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#New">New</a>
+              <a href="#new" alt>
+                New
+              </a>
             </li>
             <li>
               <a href="#popular">Popular</a>
