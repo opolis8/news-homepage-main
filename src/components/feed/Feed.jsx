@@ -48,7 +48,7 @@ const Feed = () => {
 
           <div className="buttom-container">
             <div className="buttom-info">
-              <img src="public/images/image-retro-pcs.jpg" alt="retro imag" />
+              <img src="/images/image-retro-pcs.jpg" alt="retro imag" />
               <div className="details" id="popular">
                 <span>01</span>
                 <p className="detail-title">Reviving Retro PCs</p>
@@ -58,10 +58,7 @@ const Feed = () => {
               </div>
             </div>
             <div className="buttom-info">
-              <img
-                src="/public/images/image-top-laptops.jpg"
-                alt="retro imag"
-              />
+              <img src="/images/image-top-laptops.jpg" alt="retro imag" />
               <div className="details">
                 <span>02</span>
                 <p className="detail-title">Top 10 Laptops of 2022</p>
@@ -71,10 +68,7 @@ const Feed = () => {
               </div>
             </div>
             <div className="buttom-info">
-              <img
-                src="/public/images/image-gaming-growth.jpg"
-                alt="retro imag"
-              />
+              <img src="/images/image-gaming-growth.jpg" alt="retro imag" />
               <div className="details">
                 <span>03</span> <p className="detail-title">Growth of Gaming</p>
                 <p className="description">
