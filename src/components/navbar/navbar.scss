@@ -1,0 +1,105 @@
+:root {
+  --Softorange: hsl(35, 77%, 62%);
+  --Softred: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayishblue: hsl(233, 8%, 79%);
+  --Darkgrayishblue: hsl(236, 13%, 42%);
+  --Verydarkblue: hsl(240, 100%, 5%);
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+}
+.navbar {
+  position: relative;
+  width: 75rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: hsl(36, 100%, 99%);
+    .link {
+      ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        li {
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            margin: 1rem;
+            font-weight: 600;
+            color: var(--Verydarkblue);
+          }
+          a:active {
+            color: var(--Softorange);
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+      position: relative;
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #101010;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .navbar {
+    width: 100%;
+    height: 100%;
+    .link {
+      display: none;
+
+      ul {
+        padding-top: 2rem;
+        flex-direction: column !important;
+        position: absolute;
+        top: -3.1rem;
+        right: 0rem;
+        margin-top: 50px;
+        height: 100vh;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(36, 100%, 99%);
+        overflow: hidden;
+        li {
+          padding: 1rem;
+        }
+      }
+    }
+    .hamburger {
+      margin: 1rem;
+    }
+    .show {
+      display: flex !important;
+    }
+    .hamburger {
+      display: block !important;
+    }
+  }
+}

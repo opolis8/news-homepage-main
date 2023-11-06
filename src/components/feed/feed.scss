@@ -1,0 +1,207 @@
+:root {
+  --Softorange: hsl(35, 77%, 62%);
+  --Softred: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayishblue: hsl(233, 8%, 79%);
+  --Darkgrayishblue: hsl(236, 13%, 42%);
+  --Verydarkblue: hsl(240, 100%, 5%);
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+}
+.feed {
+  .container {
+    width: 75rem;
+    height: 42rem;
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+
+    .top-container {
+      width: 75rem;
+      height: 30rem;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+
+      .left {
+        flex: 2;
+        column-gap: 1rem;
+        .cover {
+          width: 100%;
+          height: 55%;
+          background-image: url(/images/image-web-3-desktop.jpg);
+
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin-bottom: 1.5rem;
+        }
+        .details {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 40%;
+          column-gap: 1rem;
+          .left-details {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+
+            font-weight: 800;
+
+            font-size: 3rem;
+          }
+          .right-details {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+
+            color: var(--Darkgrayishblue);
+            font-weight: 600;
+            p {
+              padding-bottom: 3rem;
+            }
+            button {
+              border: none;
+              width: 12rem;
+              height: 3rem;
+              font-size: 1.1rem;
+              letter-spacing: 0.2rem;
+              font-weight: 600;
+              color: var(--Off-white);
+              background-color: var(--Softred);
+              cursor: pointer;
+            }
+            button:active {
+              background-color: var(--Verydarkblue);
+            }
+          }
+        }
+      }
+      .right {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        background-color: var(--Verydarkblue);
+        color: var(--Off-white);
+        flex: 0.7;
+        padding: 1.5rem;
+
+        .title {
+          font-size: 2rem;
+          color: var(--Softorange);
+          font-weight: bold;
+        }
+        .content {
+          p {
+            line-height: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            color: var(--Grayishblue);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--Grayishblue);
+            span {
+              color: var(--Off-white);
+              font-size: 1.2rem;
+              font-weight: 600;
+              padding-bottom: 0.5rem;
+              cursor: pointer;
+            }
+            span:active {
+              color: var(--Softorange);
+            }
+          }
+          :last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .buttom-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 10rem;
+
+      .buttom-info {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+
+        img {
+          height: 100%;
+          width: 45%;
+          padding-right: 1.5rem;
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          row-gap: 2rem;
+          span {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--Grayishblue);
+          }
+          .detail-title {
+            font-weight: 800;
+          }
+          .description {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--Darkgrayishblue);
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .container {
+      width: 100%;
+      height: 100%;
+
+      .top-container {
+        width: 100%;
+        height: 100%;
+      }
+      .buttom-container {
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .container {
+      height: 180vh;
+      .top-container {
+        display: flex;
+        flex-direction: column;
+        .left {
+          .cover {
+            background-image: url(/images/image-web-3-mobile.jpg);
+            padding: 0;
+          }
+          .details {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+      .buttom-container {
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+        gap: 1rem;
+        .buttom-info {
+          img {
+            height: 10rem;
+            width: 10rem;
+          }
+        }
+      }
+    }
+  }
+}
