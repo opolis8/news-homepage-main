@@ -1,5 +1,4 @@
 import "./feed.scss";
-import cover from "/images/image-web-3-desktop.jpg";
 
 const Feed = () => {
   return (
